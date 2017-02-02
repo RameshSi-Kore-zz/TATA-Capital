@@ -1,37 +1,37 @@
 <!DOCTYPE>
 <html>
 	<head>
-		<title>Welcome to BB&T Banking</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=1.0">
 		<style>
-        /* For device width smaller than 400px: */
+        /* For device width smaller than 450px: */
         body {
             background-repeat: no-repeat;
             background-image: url('libs/images/banking-mobile.png');
-			background-size: contain; 
+			background-size: contain;
+			width: 100%;
         }
 
-        /* For device width 400px and larger: */
-        @media only screen and (min-device-width: 400px) {
+        /* For device width 450px and larger: */
+        @media only screen and (min-device-width: 450px) {
             body { 
                background-image: url('libs/images/banking.png'); 
             }
         }
 		</style>
-		<script src="libs/jquery.js" type="text/javascript"></script>
-		<script src="libs/jquery.tmpl.min.js" type="text/javascript"></script>
-		<script src="libs/jquery-ui.min.js" type="text/javascript"></script>
-		<link href="libs/jquery-ui.min.css" rel="stylesheet"></link>
+		<script src="UI/libs/jquery.js" type="text/javascript"></script>
+		<script src="UI/libs/jquery.tmpl.min.js" type="text/javascript"></script>
+		<script src="UI/libs/jquery-ui.min.js" type="text/javascript"></script>
+		<link href="UI/libs/jquery-ui.min.css" rel="stylesheet"></link>
 		
-		<script src="../libs/lodash.min.js"></script>
-		<script src='../libs/anonymousassertion.js'></script>
-		<script src="../kore-bot-sdk-client.js"></script>
-		<script src="chatWindow.js" type="text/javascript"></script>
-		<script src="../libs/emoji.js" type="text/javascript"></script>
-		<script src="../libs/recorder.js" type="text/javascript"></script>
-		<script src="../libs/recorderWorker.js" type="text/javascript"></script>
-		<link href="chatWindow.css" rel="stylesheet"></link>
-		<link href="../libs/emojione.sprites.css" rel="stylesheet"></link>
+		<script src="libs/lodash.min.js"></script>
+		<script src='libs/anonymousassertion.js'></script>
+		<script src="kore-bot-sdk-client.js"></script>
+		<script src="UI/chatWindow.js" type="text/javascript"></script>
+		<script src="libs/emoji.js" type="text/javascript"></script>
+		<script src="libs/recorder.js" type="text/javascript"></script>
+		<script src="libs/recorderWorker.js" type="text/javascript"></script>
+		<link href="UI/chatWindow.css" rel="stylesheet"></link>
+		<link href="libs/emojione.sprites.css" rel="stylesheet"></link>
 		<script type="text/javascript">
 		$(document).on("ready",function(){
 			function assertion(options, callback) {
@@ -72,7 +72,7 @@
 			
 			var chatConfig={
 				botOptions:botOptions,
-				allowIframe: true
+				allowIframe: false
 			};
 
 			koreBotChat().show(chatConfig);
@@ -81,7 +81,6 @@
 			});
 		});
 		</script>
-        
 	</head>
 	<body>
 		<div id="chatContainer">
